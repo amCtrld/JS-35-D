@@ -1,22 +1,28 @@
+// Generate a random number between 1 and 100
 let randomNumber = Math.floor(Math.random() * 100) + 1;
-const userGuess = document.getElementById("typeNo");
-const guessSubmit = document.getElementById("enteredNo");
 
-const result = document.getElementById("result");
+// Get references to HTML elements
+const userGuessInput = document.getElementById("typeNo");
+const guessButton = document.getElementById("enteredNo");
+const resultDisplay = document.getElementById("result");
 
-const correctGuess = "You guessed correct!";
-const highGuess = "You guessed too high, try again!";
-const lowGuess = "You guessed too low, try again!";
-guessSubmit.addEventListener("click", () => {
+// Define feedback messages
+const correctGuessMessage = "You guessed correct!";
+const highGuessMessage = "You guessed too high, try again!";
+const lowGuessMessage = "You guessed too low, try again!";
 
-    let guessedNo = parseInt(userGuess.value);
-    if (guessedNo === randomNumber){
-        result.textContent = correctGuess;
-    } else if(guessedNo < randomNumber){
-        result.textContent = lowGuess;
-    } else{
-        result.textContent = highGuess;
-    }
+// Event listener for the guess button
+guessButton.addEventListener("click", () => {
+  // Get the user's guess as a number
+  let guessedNumber = parseInt(userGuessInput.value);
 
-}
-);
+  // Provide feedback based on the guess
+  if (guessedNumber === randomNumber) {
+    resultDisplay.textContent = correctGuessMessage;
+  } else if (guessedNumber < randomNumber) {
+    resultDisplay.textContent = lowGuessMessage;
+  } else {
+    resultDisplay.textContent = highGuessMessage;
+  }
+});
+
