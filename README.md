@@ -1,6 +1,6 @@
-#Project Details
+# Project Details
 
-##Number guessing game:
+## Number guessing game:
 
 - Using variables to store a secret number, user's guess,
 and number of attempts.
