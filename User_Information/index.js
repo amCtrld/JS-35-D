@@ -21,13 +21,16 @@ userInfo.addEventListener("click", () => {
         nationality : nationality.value,
     }
 
-    infoDisplay.textContent = `
-        First Name: ${userData.fname} \n
-        Last Name: ${userData.lname}
-        Email: ${userData.email}
-        Phone: ${userData.phone}
+    // Print user info on separate lines
+    infoDisplay.innerHTML = 'Your Info is:<br><br>' +
+     `
+        First Name: ${userData.fname}<br>
+        Last Name: ${userData.lname}<br>
+        Email: ${userData.email}<br>
+        Phone: ${userData.phone}<br>
         Nationality: ${userData.nationality}
     `;
+
     console.log(display);
 
 }
