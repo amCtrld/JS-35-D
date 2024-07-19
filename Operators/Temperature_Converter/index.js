@@ -1,22 +1,22 @@
-const readTempInC = document.getElementById("takeTempInC");
-const sendTempInC = document.getElementById("convertTempToF");
-const postTempInF = document.getElementById("resultInF");
+const convertTemp = document.getElementById("convertTemp");
+const takeTempInput = document.getElementById("takeTemp");
+const conversionTypeSelect = document.getElementById("conversionType");
+const resultDiv = document.getElementById("result");
 
-const readTempInF = document.getElementById("takeTempInF");
-const sendTempInF = document.getElementById("convertTempToC");
-const postTempInC = document.getElementById("resultInC");
+convertTemp.addEventListener("click", () => {
+  const tempValue = parseFloat(takeTempInput.value);
+  const selectedConversion = conversionTypeSelect.value;
 
+  let convertedTemp;
 
-sendTempInC.addEventListener("click", () => {
-    let tempValue = readTempInC.value;
-    tempValue = parseInt(tempValue);
-    const fahrenheit = (tempValue * 9/5) + 32;
-    postTempInF.textContent = fahrenheit;
-});
+  if (selectedConversion === "CtoF") {
+    convertedTemp = (tempValue * 9) / 5 + 32;
+  } else if (selectedConversion === "FtoC") {
+    convertedTemp = ((tempValue - 32) * 5) / 9;
+  }
 
-sendTempInF.addEventListener("click", () => {
-    let tempValue = readTempInF.value;
-    tempValue = parseInt(tempValue);
-    const celcius = (tempValue - 32) * 5/9;
-    postTempInC.textContent = celcius;
+  resultDiv.textContent = `${tempValue} ${selectedConversion.slice(
+    0,
+    1
+  )} is equal to ${convertedTemp.toFixed(2)} ${selectedConversion.slice(2, 3)}`;
 });

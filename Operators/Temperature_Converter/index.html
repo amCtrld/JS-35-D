@@ -13,20 +13,15 @@
         <p>Temperature Calculator</p>
         <div>
             <form action="">
-                <label for="takeTempInC">Temp in C:</label>
-                <input class="w3-input" type="number" name="takeTemp" id="takeTempInC">
-                <button type="button" id="convertTempToF" class="w3-button w3-green w3-margin">Convert</button>
+                <label for="takeTemp">Temp:</label>
+                <input class="w3-input" type="number" name="takeTemp" id="takeTemp">
+                <select class="w3-padding w3-border-0 w3-bar-block" title="conversionType" id="conversionType">
+                    <option value="CtoF">Celsius to Fahrenheit</option>
+                    <option value="FtoC">Fahrenheit to Celsius</option>
+                  </select>
+                <button type="button" id="convertTemp" class="w3-button w3-green w3-margin">Convert</button>
             </form>
-            <div id="resultInF">
-            </div>
-        </div>
-        <div>
-            <form action="">
-                <label for="takeTempInF">Temp in F:</label>
-                <input class="w3-input" type="number" name="takeTemp" id="takeTempInF">
-                <button type="button" id="convertTempToC" class="w3-button w3-green w3-margin">Convert</button>
-            </form>
-            <div id="resultInC">
+            <div id="result">
             </div>
         </div>
     </div>
