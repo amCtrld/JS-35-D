@@ -13,11 +13,20 @@
         <p>Temperature Calculator</p>
         <div>
             <form action="">
-                <label for="takeTemp">Enter Temperature:</label>
-                <input class="w3-input" type="number" name="takeTemp" id="takeTemp">
-                <button type="button" id="convertTemp" class="w3-button w3-green w3-margin">Convert</button>
+                <label for="takeTempInC">Temp in C:</label>
+                <input class="w3-input" type="number" name="takeTemp" id="takeTempInC">
+                <button type="button" id="convertTempToF" class="w3-button w3-green w3-margin">Convert</button>
             </form>
-            <div id="result">
+            <div id="resultInF">
+            </div>
+        </div>
+        <div>
+            <form action="">
+                <label for="takeTempInF">Temp in F:</label>
+                <input class="w3-input" type="number" name="takeTemp" id="takeTempInF">
+                <button type="button" id="convertTempToC" class="w3-button w3-green w3-margin">Convert</button>
+            </form>
+            <div id="resultInC">
             </div>
         </div>
     </div>
