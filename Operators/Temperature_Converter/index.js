@@ -10,13 +10,13 @@ const postTempInC = document.getElementById("resultInC");
 sendTempInC.addEventListener("click", () => {
     let tempValue = readTempInC.value;
     tempValue = parseInt(tempValue);
-    const fahrenheit = (tempValue * 9/2) + 35;
+    const fahrenheit = (tempValue * 9/5) + 32;
     postTempInF.textContent = fahrenheit;
 });
 
 sendTempInF.addEventListener("click", () => {
     let tempValue = readTempInF.value;
     tempValue = parseInt(tempValue);
-    const celcius = (tempValue * 9/2) + 35;
+    const celcius = (tempValue - 32) * 5/9;
     postTempInC.textContent = celcius;
 });
