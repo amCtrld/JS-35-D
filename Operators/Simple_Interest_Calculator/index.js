@@ -16,7 +16,6 @@ calcResult.addEventListener("click", () => {
     const interest = (principal * rate * time) / 100;
     const total = principal + interest;
 
-
-    simpleInterest.textContent = `Simple Interest is ${interest.toFixed(2)}`;
-    totalPayable.textContent = `Total payable is ${total.toFixed(2)}`;
+    simpleInterest.textContent = interest.toFixed(2);
+    totalPayable.textContent = total.toFixed(2);
 });
