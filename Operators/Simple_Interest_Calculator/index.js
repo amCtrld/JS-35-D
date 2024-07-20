@@ -3,7 +3,9 @@ const rateGiven = document.getElementById("rate");
 const timeGiven = document.getElementById("time");
 const calcResult = document.getElementById("calculate");
 
-const result = document.getElementById("result");
+const simpleInterest = document.getElementById("simpleInterest");
+const totalPayable = document.getElementById("totalPayable");
+
 
 calcResult.addEventListener("click", () => {
     // Get values from input fields and convert to numbers
@@ -15,5 +17,6 @@ calcResult.addEventListener("click", () => {
     const total = principal + interest;
 
 
-    result.textContent = `Simple Interest is ${interest.toFixed(2)} and total payable is ${total.toFixed(2)}`;
+    simpleInterest.textContent = `Simple Interest is ${interest.toFixed(2)}`;
+    totalPayable.textContent = `Total payable is ${total.toFixed(2)}`;
 });
