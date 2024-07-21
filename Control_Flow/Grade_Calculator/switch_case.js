@@ -28,28 +28,29 @@ gradeButton.addEventListener("click", () => {
     let grade; // Declare a variable to store the grade
 
     switch (true) {
-        case mark >= 80 && mark <= 99:
+        case mark >= 80 && mark <= 99: // Check for the range 80-99
             grade = "A";
             break;
-        case mark >= 70:
+        case mark >= 70 && mark <= 79: // Check for the range 70-79
             grade = "B";
             break;
-        case mark >= 60:
+        case mark >= 60 && mark <= 69:
             grade = "C";
             break;
-        case mark >= 50:
+        case mark >= 50 && mark <= 59:
             grade = "D";
             break;
-        case mark >= 40:
+        case mark >= 40 && mark <= 49:
             grade = "E";
             break;
         case mark < 40:
             grade = "F";
             break;
-        default:
+        default: // This will now catch marks above 99
             grade = "N/A";
             break;
     }
+    
 
 
     gradedName.innerHTML = fname + " " + lname;
