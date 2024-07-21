@@ -11,28 +11,30 @@ Marks reference
 //Collect user input
 const studentName = document.getElementById("studentName");
 const studentMark = document.getElementById("studentMark");
-const grade = document.getElementById("grade");
+const gradeButton = document.getElementById("grade");
 
 //Where to post
 const gradedName = document.getElementById("gradedName");
 const gradedMark = document.getElementById("gradedMark");
+const gradedGrade = document.getElementById("gradedGrade");
+
 
 grade.addEventListener("click", () => {
     const name = studentName.value;
     const mark = studentMark.value;
 
     if(mark >= 80 && mark <= 99) {
-        grade.innerHTML = "A";
+        gradedGrade.innerHTML = "A";
     } else if(mark >= 70 && mark <= 79) {
-        grade.innerHTML = "B";
+        gradedGrade.innerHTML = "B";
     } else if(mark >= 60 && mark <= 69) {
-        grade.innerHTML = "C";
+        gradedGrade.innerHTML = "C";
     } else if(mark >= 50 && mark <= 59) {
-        grade.innerHTML = "D";
+        gradedGrade.innerHTML = "D";
     } else if(mark >= 40 && mark <= 49) {
-        grade.innerHTML = "E";
+        gradedGrade.innerHTML = "E";
     } else {
-        grade.innerHTML = "F";
+        gradedGrade.innerHTML = "F";
     }
 
     gradedName.innerHTML = name;
