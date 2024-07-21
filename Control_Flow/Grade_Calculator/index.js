@@ -20,27 +20,30 @@ const gradedMark = document.getElementById("gradedMark");
 const gradedGrade = document.getElementById("gradedGrade");
 
 
-grade.addEventListener("click", () => {
+gradeButton.addEventListener("click", () => {
     const fname = firstName.value;
     const lname = lastName.value;
-    const mark = studentMark.value;
+    let mark = parseInt(studentMark.value); // Parse the input as an integer
 
-    if(mark >= 80 && mark <= 99) {
-        gradedGrade.innerHTML = "A";
-    } else if(mark >= 70 && mark <= 79) {
-        gradedGrade.innerHTML = "B";
-    } else if(mark >= 60 && mark <= 69) {
-        gradedGrade.innerHTML = "C";
-    } else if(mark >= 50 && mark <= 59) {
-        gradedGrade.innerHTML = "D";
-    } else if(mark >= 40 && mark <= 49) {
-        gradedGrade.innerHTML = "E";
-    } else if (mark < 40){
-        gradedGrade.innerHTML = "F";
+    let grade; // Declare a variable to store the grade
+
+    if (mark >= 80) {
+        grade = "A";
+    } else if (mark >= 70) {
+        grade = "B";
+    } else if (mark >= 60) {
+        grade = "C";
+    } else if (mark >= 50) {
+        grade = "D";
+    } else if (mark >= 40) {
+        grade = "E";
+    } else if (mark < 40) {
+        grade = "F";
     } else {
-        gradedGrade.innerHTML = "N/A";
+        grade = "N/A";
     }
 
     gradedName.innerHTML = fname + " " + lname;
     gradedMark.innerHTML = mark;
+    gradedGrade.innerHTML = grade;
 });
