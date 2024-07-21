@@ -28,7 +28,7 @@ gradeButton.addEventListener("click", () => {
     let grade; // Declare a variable to store the grade
 
     switch (true) {
-        case mark >= 80:
+        case mark >= 80 && mark <= 99:
             grade = "A";
             break;
         case mark >= 70:
