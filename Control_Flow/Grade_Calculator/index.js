@@ -9,7 +9,8 @@ Marks reference
 */
 
 //Collect user input
-const studentName = document.getElementById("studentName");
+const firstName = document.getElementById("studentFirstName");
+const lastName = document.getElementById("studentLastName");
 const studentMark = document.getElementById("studentMark");
 const gradeButton = document.getElementById("grade");
 
@@ -20,7 +21,8 @@ const gradedGrade = document.getElementById("gradedGrade");
 
 
 grade.addEventListener("click", () => {
-    const name = studentName.value;
+    const fname = firstName.value;
+    const lname = lastName.value;
     const mark = studentMark.value;
 
     if(mark >= 80 && mark <= 99) {
@@ -33,10 +35,12 @@ grade.addEventListener("click", () => {
         gradedGrade.innerHTML = "D";
     } else if(mark >= 40 && mark <= 49) {
         gradedGrade.innerHTML = "E";
-    } else {
+    } else if (mark < 40){
         gradedGrade.innerHTML = "F";
+    } else {
+        gradedGrade.innerHTML = "N/A";
     }
 
-    gradedName.innerHTML = name;
+    gradedName.innerHTML = fname + " " + lname;
     gradedMark.innerHTML = mark;
 });
