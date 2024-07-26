@@ -21,6 +21,22 @@ submit.addEventListener("click", () => {
         mathsMarks: mathsMarks.value,
     };
 
+    // Convert the marks to numbers before adding
+    const totalMarks = parseInt(physicsMarks.value) + parseInt(chemistryMarks.value) + parseInt(mathsMarks.value);
+
+    let remark = "";
+
+    function evaluation() {
+        if (totalMarks >= 240){
+            remark = "Passed";
+        }
+        else{
+            remark = "Failed";
+        }
+
+        return remark;
+        }
+
     console.log(studentObject);
     results.innerHTML = `
     <p>${studentObject.firstName} ${studentObject.lastname}</p>
@@ -28,5 +44,6 @@ submit.addEventListener("click", () => {
     <p>${studentObject.physicsMarks}</p>
     <p>${studentObject.chemistryMarks}</p>
     <p>${studentObject.mathsMarks}</p>
+    <p class="${evaluation() === 'Passed' ? 'w3-green' : 'w3-red'}">${evaluation()}</p>
     `;
 });
