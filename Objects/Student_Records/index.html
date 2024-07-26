@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Records</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="w3-card w3-padding w3-display-middle w3-half">
@@ -19,11 +19,12 @@
                 <input class="w3-input w3-padding w3-tiny" type="number" id="physics" name="physics" placeholder="Physics">
                 <input class="w3-input w3-padding w3-tiny" type="number" id="chemistry" name="chemistry" placeholder="Chemistry" >
                 <input class="w3-input w3-padding w3-tiny" type="number" id="maths" name="maths" placeholder="Maths">
-                <button class="w3-button w3-padding w3-margin-top w3-green" type="button">Submit</button>
+                <button class="w3-button w3-padding w3-margin-top w3-green" type="button" id="submit">Submit</button>
             </form>
         </div>
         <div class="w3-half w3-center w3-padding">
             <p class="w3-blue w3-padding">Student Details</p>
+            <p class="w3-padding" id="result"></p>
         </div>
     </div>
 </body>
