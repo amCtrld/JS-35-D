@@ -8,16 +8,25 @@ const mathsMarks = document.getElementById("maths");
 const results = document.getElementById("result");
 const submit = document.getElementById("submit");
 
-const studentObject = {
-    firstName: firstName.value,
-    lastname: lastname.value,
-    registrationNo: registrationNo.value,
-    physicsMarks: physicsMarks.value,
-    chemistryMarks: chemistryMarks.value,
-    mathsMarks: mathsMarks.value,
-};
 
 submit.addEventListener("click", () => {
     
+
+    const studentObject = {
+        firstName: firstName.value,
+        lastname: lastname.value,
+        registrationNo: registrationNo.value,
+        physicsMarks: physicsMarks.value,
+        chemistryMarks: chemistryMarks.value,
+        mathsMarks: mathsMarks.value,
+    };
+
     console.log(studentObject);
+    results.innerHTML = `
+    <p>${studentObject.firstName} ${studentObject.lastname}</p>
+    <p>${studentObject.registrationNo}</p>
+    <p>${studentObject.physicsMarks}</p>
+    <p>${studentObject.chemistryMarks}</p>
+    <p>${studentObject.mathsMarks}</p>
+    `;
 });
