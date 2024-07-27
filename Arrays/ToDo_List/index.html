@@ -13,10 +13,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 5px;
+            padding: 1px;
         }
-        .task-item button {
-            margin-left: auto;
+        .task-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .task-done {
+            text-decoration: line-through;
+            color: red;
         }
     </style>
 </head>
@@ -26,10 +31,10 @@
             <p class="w3-blue w3-padding w3-bolder w3-margin-bottom">Your Tasks</p>
             <div id="taskList" class="w3-margin-bottom"></div>
         </div>
-        <div class="w3-padding w3-margin">
+        <div class="w3-padding">
             <form action="">
                 <input type="text" placeholder="Enter your task" id="newTask" class="w3-input w3-small w3-padding">
-                <button type="button" class="w3-button w3-padding w3-margin-top w3-border w3-round-large w3-green" title="Add Task" id="addTask">
+                <button type="button" class="w3-button w3-padding w3-margin-top w3-border w3-round-large w3-green w3-right" title="Add Task" id="addTask">
                     <i class="fa fa-plus"></i>
                 </button>
             </form>
