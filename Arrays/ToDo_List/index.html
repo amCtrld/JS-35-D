@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="https://w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="w3-display-container w3-center">
-        <div class="w3-padding w3-small" id="taskList">
+    <div class="w3-display-container">
+        <div class="w3-padding w3-small">
             <p class="w3-blue w3-padding w3-bolder w3-margin-bottom">Your Tasks</p>
+            <div id="taskList" class="w3-left w3-margin-bottom">
 
+            </div>
         </div>
-        <div class="w3-padding w3-border w3-margin">
+        <div class="w3-padding w3-margin">
             <form action="">
                 <input type="text" placeholder="Enter your task" id="newTask" class="w3-input w3-small w3-padding">
-                <button type="button" class="w3-button w3-padding w3-margin-top w3-border w3-round-large w3-green" title="Add Task">
+                <button type="button" class="w3-button w3-padding w3-margin-top w3-border w3-round-large w3-green" title="Add Task" id="addTask">
                     <i class="fa fa-plus"></i>
                 </button>
             </form>
