@@ -1,5 +1,5 @@
 const name = document.getElementById("name");
-const category = document.getElementById("category"); // Corrected spelling
+const category = document.getElementById("category");
 const quantity = document.getElementById("quantity");
 const buyingPrice = document.getElementById("buyingPrice");
 const sellingPrice = document.getElementById("sellingPrice");
