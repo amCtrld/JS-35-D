@@ -3,3 +3,4 @@
 - Use arrays to store tasks and manipulate them (add, remove,
 complete).
   - Adding Tasks
+  - Deleting Tasks
