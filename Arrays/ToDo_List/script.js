@@ -19,7 +19,6 @@ function displayTasks() {
     const taskItem = document.createElement("div");
     taskItem.classList.add(
       "task-item",
-      "w3-border",
       "w3-padding-small",
       "w3-round",
       "w3-margin-bottom"
@@ -34,7 +33,7 @@ function displayTasks() {
 
     // Create a done button
     const doneButton = document.createElement("button");
-    doneButton.classList.add("w3-button", "w3-green", "w3-round-large");
+    doneButton.classList.add("w3-button", "done", "w3-round-large");
     const doneIcon = document.createElement("i");
     doneIcon.classList.add("fa", "fa-check");
     doneButton.appendChild(doneIcon);
@@ -45,7 +44,7 @@ function displayTasks() {
 
     // Create a delete button
     const deleteButton = document.createElement("button");
-    deleteButton.classList.add("w3-button", "w3-red", "w3-round-large");
+    deleteButton.classList.add("w3-button", "delete", "w3-round-large");
     const deleteIcon = document.createElement("i");
     deleteIcon.classList.add("fa", "fa-trash");
     deleteButton.appendChild(deleteIcon);
