@@ -8,14 +8,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js" defer></script>
+    <style>
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+        }
+        .task-item button {
+            margin-left: auto;
+        }
+    </style>
 </head>
 <body>
     <div class="w3-display-container">
         <div class="w3-padding w3-small">
             <p class="w3-blue w3-padding w3-bolder w3-margin-bottom">Your Tasks</p>
-            <div id="taskList" class="w3-left w3-margin-bottom">
-
-            </div>
+            <div id="taskList" class="w3-margin-bottom"></div>
         </div>
         <div class="w3-padding w3-margin">
             <form action="">
