@@ -11,16 +11,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="w3-margin w3-padding w3-display-container">
+    <div class="main-container w3-margin w3-container w3-card w3-display-middle w3-half">
+        <div class="w3-center w3-padding input-bg font-1">Number Sorting</div>
         <div class="w3-half w3-padding">
-            <div class="w3-padding">Enter numbers separated by commas:</div>
-            <form action="">
-                <input class="w3-input" type="text" placeholder="Enter numbers" id="numbers">
-                <button type="button" class="w3-button">Sort</button>
+            <div class="w3-padding input-bg font-2 w3-small">Unsorted numbers:</div>
+            <form action="" class="w3-center">
+                <input class="input-bg w3-input w3-tiny" type="text" placeholder="Comma separated" id="numbers">
+                <button type="button" class="w3-button w3-margin-top w3-round-large" id="sort">Sort</button>
             </form>
         </div>
         <div class="w3-half w3-padding">
-            <div class="w3-padding">Sorted numbers:</div>
+            <div class="w3-padding input-bg font-2 w3-small">Sorted numbers:</div>
             <div id="sortedNumbers"></div>
         </div>
     </div>
