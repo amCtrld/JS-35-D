@@ -4,12 +4,19 @@ const addTaskButton = document.getElementById("addTask");
 const newTaskInput = document.getElementById("newTask");
 const taskList = document.getElementById("taskList");
 
+// Retrieve tasks from session storage on page load
+const storedTasks = sessionStorage.getItem('todoList');
+if (storedTasks) {
+  tasks = JSON.parse(storedTasks);
+}
+
 addTaskButton.addEventListener("click", () => {
   const newTaskText = newTaskInput.value;
   if (newTaskText !== "") {
     tasks.push(newTaskText);
     displayTasks();
     newTaskInput.value = "";
+    saveToSessionStorage();
   }
 });
 
@@ -66,5 +73,9 @@ function displayTasks() {
     taskList.appendChild(taskItem);
   });
 }
+
+function saveToSessionStorage() {
+    sessionStorage.setItem('todoList', JSON.stringify(tasks));
+  }
 
 displayTasks();
