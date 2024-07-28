@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="main">
     <div class="main-container w3-margin w3-display-contaimner">
         <div class="w3-padding w3-small">
@@ -18,12 +20,31 @@
         </div>
         <div class="w3-padding">
             <form action="">
-                <input type="text" placeholder="Enter your task" id="newTask" class="w3-input input-bg w3-small w3-padding">
-                <button type="button" class="w3-button w3-padding w3-margin-top w3-border w3-round-large w3-green w3-right" title="Add Task" id="addTask">
+                <input type="text" placeholder="Enter your task" id="newTask"
+                    class="w3-input input-bg w3-small w3-padding">
+                    <div class="w3-padding w3-tiny w3-center w3-margin-top">Priority Level</div>
+                <div class="w3-container radio-select w3-tiny">
+                    <div class="radio-container w3-margin-right">
+                        <input type="radio" id="high" name="priority" title="High">
+                        <label class="custom-radio w3-red" for="high"></label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="mid" name="priority" title="Mid">
+                        <label class="custom-radio w3-yellow" for="mid"></label>
+                    </div>
+                    <div class="radio-container w3-margin-left">
+                        <input type="radio" id="low" name="priority" title="Low">
+                        <label class="custom-radio w3-green" for="low"></label>
+                    </div>
+                </div>
+                <button type="button"
+                    class="w3-button w3-padding w3-margin-top w3-border w3-round-large w3-green w3-right"
+                    title="Add Task" id="addTask">
                     <i class="fa fa-plus"></i>
                 </button><br><br>
             </form>
         </div>
     </div>
 </body>
+
 </html>

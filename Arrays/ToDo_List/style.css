@@ -34,6 +34,12 @@ body {
             background: #DCDEF0;
             padding: 1px;
         }
+.radio-select{
+    display: flex;
+    gap: 10px;
+
+}
+
         .task-buttons {
             display: flex;
             gap: 10px;
@@ -41,4 +47,80 @@ body {
         .task-done {
             text-decoration: line-through;
             color: red;
+        }
+        option{
+            padding: 30px;
+        }
+
+        .radio-select {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .radio-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .radio-container input[type="radio"] {
+            margin: 0;
+        }
+
+        .radio-container label {
+            margin-top: 8px;
+        }
+        .radio-select {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .radio-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Hide the native radio button */
+        .radio-container input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* Create a custom radio button */
+        .custom-radio {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ddd;
+            position: relative;
+            cursor: pointer;
+        }
+
+        /* Create the checked state */
+        .custom-radio::after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #2E537C; /* Custom color */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        /* Show the checked state when the radio is checked */
+        .radio-container input[type="radio"]:checked + .custom-radio::after {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .radio-container label {
+            margin-top: 8px;
         }
