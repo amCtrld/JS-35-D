@@ -18,7 +18,7 @@ body {
             background: #E2BECC;
         }
         .input-bg {
-            background: #DAF0F1;
+            background: #E7CDD7;
         }
         .delete{
             background: #E0B1B1;
@@ -31,7 +31,7 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #DCDEF0;
+            background: #E7CDD7;
             padding: 1px;
         }
 .radio-select{
@@ -123,4 +123,25 @@ body {
 
         .radio-container label {
             margin-top: 8px;
+        }
+
+        .font-1{
+            color: #E0E0E0;
+        }
+        
+        .font-2{
+            color: #797373;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .no-border:focus {
+            outline: none;
+          }
+
+          .my-input {
+            padding: 8px;
+            display: block;
+            border: none;
+            width: 100%
         }
