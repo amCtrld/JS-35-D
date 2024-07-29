@@ -1,4 +1,4 @@
 # Repository Description
 
-- Learning JS in a Project-based approach in 35 days.
+- Learning JS in a Project-Based approach in 35 days.
 
