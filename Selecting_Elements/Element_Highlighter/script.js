@@ -7,7 +7,7 @@ const red = document.getElementById('red');
 const yellow = document.getElementById('yellow');
 const green = document.getElementById('green');
 const message = document.getElementById('message');
-
+const hover = document.getElementById('hover');
 
 function changeColor(color) {
     message.style.backgroundColor = color;
@@ -29,9 +29,8 @@ toggle.addEventListener('click', () => {
     if (body.classList.contains('w3-black')) {
         sun.style.display = 'block';
         moon.style.display = 'none';
-        toggle.classList.add('w3-button');
     } else {
         sun.style.display = 'none';
         moon.style.display = 'block';
     }
-})
+});

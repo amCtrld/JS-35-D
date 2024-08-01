@@ -2,14 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Elements Highlighter</title>
-    <link rel="stylesheet" href="https://w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="script.js" defer></script>
+    <script src="scrikpt.js" defer></script>
+    <style>
+        #toggle {
+            width: 50px; /* Ensure consistent button size */
+        }
+        #hover {
+            background-color: cyan;
+            transition: background-color 1s ease;
+        }
+        #hover:hover {
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
 <div class="w3-display-topright w3-margin">
@@ -31,6 +42,12 @@
             <i class="fa fa-heart" aria-hidden="true"></i>
         </button>
     </div>
+    <div id="hover" class="w3-padding w3-margin">
+        Hover on me to change my color
+    </div>
 </div>
+<script>
+
+</script>
 </body>
 </html>
