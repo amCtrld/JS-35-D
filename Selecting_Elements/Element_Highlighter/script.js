@@ -1,17 +1,16 @@
-const red = document.getElementById('red');
-const yellow = document.getElementById('yellow');
-const green = document.getElementById('green');
-const message = document.getElementById('message');
+const toggle = document.getElementById('toggle');
+const sun = document.getElementById('sun');
+const moon = document.getElementById('moon');
+const body = document.querySelector('body');
 
-red.addEventListener('click', () => {
-    document.body.style.backgroundColor = 'red';
-    message.innerHTML = 'Red selected';
-});
-yellow.addEventListener('click', () => {
-    document.body.style.backgroundColor = 'yellow';
-    message.innerHTML = 'Yellow selected';
-});
-green.addEventListener('click', () => {
-    document.body.style.backgroundColor = 'green';
-    message.innerHTML = 'Green selected';
-});
+toggle.addEventListener('click', () => {
+    body.classList.toggle('w3-black');
+    if (body.classList.contains('w3-black')) {
+        sun.style.display = 'block';
+        moon.style.display = 'none';
+        toggle.classList.add('w3-button');
+    } else {
+        sun.style.display = 'none';
+        moon.style.display = 'block';
+    }
+})
