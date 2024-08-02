@@ -1,0 +1,11 @@
+body{
+    background: url("space.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.profile-card{
+    background: rgba(143,187,222,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(143,187,222,0.25);
+}
