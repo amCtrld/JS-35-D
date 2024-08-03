@@ -26,7 +26,7 @@ submit.addEventListener("click", () => {
   if (file) {
     const reader = new FileReader();
     reader.onload = function (e) {
-      profileImage.innerHTML = `<img src="${e.target.result}" alt="User Image">`;
+      profileImage.innerHTML = `<img src="${e.target.result}" alt="User Image" class="w3-image w3-roung-large">`;
     };
     reader.readAsDataURL(file);
   } else {
