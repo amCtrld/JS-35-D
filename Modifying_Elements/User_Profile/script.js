@@ -33,3 +33,11 @@ submit.addEventListener("click", () => {
     profileImage.innerHTML = `<img src="space.jpg" alt="Default Image">`;
   }
 });
+
+// Add styling to the placeholders
+name.classList.add("w3-left", "w3-white", "w3-padding");
+email.classList.add("w3-left", "w3-white", "w3-padding");
+phone.classList.add("w3-left", "w3-white", "w3-padding");
+info.classList.add("w3-left", "w3-white", "w3-padding");
+
+
