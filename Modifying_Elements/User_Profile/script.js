@@ -1,57 +1,60 @@
+
 const name = document.getElementById("takeName");
 const email = document.getElementById("takeEmail");
 const phone = document.getElementById("takePhone");
 const imageInput = document.getElementById("takeImage");
 const submit = document.getElementById("userInfo");
-
 const profile = document.getElementById("profile");
 const profileImage = document.getElementById("image");
 const info = document.getElementById("info");
 const form = document.getElementById("form");
 
-// Edit profile
+const userData = {
+    name: "",
+    email: "",
+    phone: "",
+};
+
 function editProfile() {
-  profile.style.display = "none";
-  form.style.display = "block";
-  name.value = userData.name;
-  email.value = userData.email;
-  phone.value = userData.phone;
+    profile.style.display = "none";
+    form.style.display = "block";
+    name.value = userData.name;
+    email.value = userData.email;
+    phone.value = userData.phone;
+}
+
+function displayProfile() {
+    info.innerHTML = `
+        <p>Name: ${userData.name}</p>
+        <p>Email: ${userData.email}</p>
+        <p>Phone: ${userData.phone}</p>
+        <button class="w3-button w3-blue w3-right" onclick="editProfile()">Edit Profile</button>
+    `;
+    profile.style.display = "block";
+    form.style.display = "none";
 }
 
 submit.addEventListener("click", () => {
-  // Get values from input fields
-  const userData = {
-    name: name.value,
-    email: email.value,
-    phone: phone.value,
-  };
+    if (name.value === "" || email.value === "" || phone.value === "") {
+        alert("Fields cannot be empty!");
+        return;
+    } else {
+        // Update userData object
+        userData.name = name.value;
+        userData.email = email.value;
+        userData.phone = phone.value;
 
-  // Display user info
-  info.innerHTML = `
-            <p>Name: ${userData.name}</p>
-            <p>Email: ${userData.email}</p>
-            <p>Phone: ${userData.phone}</p>
-            <button class="w3-button w3-blue w3-right" onclick="editProfile()">Edit Profile</button>
-            `;
+        const file = imageInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                profileImage.innerHTML = `<img src="${e.target.result}" alt="User Image" class="w3-image w3-card w3-round-large">`;
+            };
+            reader.readAsDataURL(file);
+        } else {
+            profileImage.innerHTML = `<img src="space.jpg" alt="Default Image" class="w3-image w3-card w3-round-large">`;
+        }
 
-  // Handle image upload
-  const file = imageInput.files[0];
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      profileImage.innerHTML = `<img src="${e.target.result}" alt="User Image" class="w3-image w3-roung-large">`;
-    };
-    reader.readAsDataURL(file);
-  } else {
-    profileImage.innerHTML = `<img src="space.jpg" alt="Default Image">`;
-  }
-
-  profile.style.display = "block";
-  form.style.display = "none";
+        displayProfile();
+    }
 });
-
-// Add styling to the placeholders
-name.classList.add("w3-left", "w3-white", "w3-padding");
-email.classList.add("w3-left", "w3-white", "w3-padding");
-phone.classList.add("w3-left", "w3-white", "w3-padding");
-info.classList.add("w3-small");
