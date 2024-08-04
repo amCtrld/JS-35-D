@@ -9,6 +9,14 @@ const profileImage = document.getElementById("image");
 const info = document.getElementById("info");
 const form = document.getElementById("form");
 
+// Edit profile
+function editProfile() {
+  profile.style.display = "none";
+  form.style.display = "block";
+  name.value = userData.name;
+  email.value = userData.email;
+  phone.value = userData.phone;
+}
 
 submit.addEventListener("click", () => {
   // Get values from input fields
@@ -20,9 +28,10 @@ submit.addEventListener("click", () => {
 
   // Display user info
   info.innerHTML = `
-            <p">Name: ${userData.name}</p>
+            <p>Name: ${userData.name}</p>
             <p>Email: ${userData.email}</p>
             <p>Phone: ${userData.phone}</p>
+            <button class="w3-button w3-blue w3-right" onclick="editProfile()">Edit Profile</button>
             `;
 
   // Handle image upload
