@@ -7,6 +7,8 @@ const submit = document.getElementById("userInfo");
 const profile = document.getElementById("profile");
 const profileImage = document.getElementById("image");
 const info = document.getElementById("info");
+const form = document.getElementById("form");
+
 
 submit.addEventListener("click", () => {
   // Get values from input fields
@@ -17,9 +19,11 @@ submit.addEventListener("click", () => {
   };
 
   // Display user info
-  info.innerHTML = `Name: ${userData.name}<br>
-            Email: ${userData.email}<br>
-            Phone: ${userData.phone}`;
+  info.innerHTML = `
+            <p">Name: ${userData.name}</p>
+            <p>Email: ${userData.email}</p>
+            <p>Phone: ${userData.phone}</p>
+            `;
 
   // Handle image upload
   const file = imageInput.files[0];
@@ -32,12 +36,13 @@ submit.addEventListener("click", () => {
   } else {
     profileImage.innerHTML = `<img src="space.jpg" alt="Default Image">`;
   }
+
+  profile.style.display = "block";
+  form.style.display = "none";
 });
 
 // Add styling to the placeholders
 name.classList.add("w3-left", "w3-white", "w3-padding");
 email.classList.add("w3-left", "w3-white", "w3-padding");
 phone.classList.add("w3-left", "w3-white", "w3-padding");
-info.classList.add("w3-left", "w3-white", "w3-padding");
-
-
+info.classList.add("w3-small");
