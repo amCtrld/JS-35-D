@@ -46,11 +46,11 @@ submit.addEventListener("click", () => {
     if (file) {
         const reader = new FileReader();
         reader.onload = function (e) {
-            portada.innerHTML = `<img src="${e.target.result}" alt="User Image" class="w3-image w3-card w3-round-large">`;
+            portada.innerHTML = `<img src="${e.target.result}" alt="User Image" class="w3-img round-image">`;
         };
         reader.readAsDataURL(file);
     } else {
-        portada.innerHTML = `<img src="space.jpg" alt="Default Image" class="w3-image w3-card w3-round-large">`;
+        portada.innerHTML = `<img src="space.jpg" alt="Default Image" class="w3-img round-image">`;
     }
 
     displayProfile();

@@ -24,6 +24,15 @@
             padding: 0 1rem;
         }
 
+        .round-image {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+
         .card .title {
             padding: 1rem;
             text-align: right;
@@ -90,10 +99,10 @@
             font-size: 24px;
             color: #8bc34a;
             cursor: pointer;
-            transition: 0.5s;
+            transition: 1s;
         }
 
         button:hover {
             color: #4CAF50;
-            transform: rotate(22deg);
+            transform: rotate(45deg);
         }
