@@ -10,13 +10,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js" defer></script>
+    <style>
+        .image{
+            width: fit-content;
+        }
+    </style>
 </head>
 <body>
      <div class="w3-display-middle w3-half w3-card w3-round-xxlarge w3-center">
-         <div id="likesCount" class="w3-round-xxlarge w3-border-light-blue w3-padding-large"></div>
+         <div>
+             <img src="range.jpg" alt="Range Rover" class="w3-image w3-padding w3-margin-top w3-round-xxlarge image">
+         </div>
+         <div id="likesCount" class="w3-round-xxlarge w3-border-light-blue w3-padding w3-margin">0 likes</div>
          <div class="w3-margin">
-             <button id="like" class="w3-button w3-padding w3-round-xxlarge"><i class="fa fa-thumbs-up w3-text-green"></i></button>
-             <button id="dislike" class="w3-button w3-padding w3-round-xxlarge"><i class="fa fa-thumbs-down w3-text-red"></i></button>
+             <button id="like" class="w3-black w3-button w3-padding w3-round-xxlarge"><i class="fa fa-thumbs-up w3-text-green"></i></button>
+             <button id="dislike" class="w3-black w3-button w3-padding w3-round-xxlarge"><i class="fa fa-thumbs-down w3-text-red"></i></button>
          </div>
      </div>
 </body>
