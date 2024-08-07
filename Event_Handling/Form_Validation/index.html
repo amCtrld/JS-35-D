@@ -8,19 +8,28 @@
     <title>Form validation</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="w3-display-middle w3-padding-large w3-half w3-center w3-card w3-round-large">
         <div>Form Validation</div>
         <div>
-            <form action="">
+            <form action="" id="form">
                 <input id="name" class="w3-input w3-tiny" title="Enter Name" type="text" placeholder="Enter Name">
+                <small id="nameError" class="w3-text-red"></small>
                 <input id="email" class="w3-input w3-tiny" title="Enter Email" type="email" placeholder="Enter Email">
+                <small id="emailError" class="w3-text-red"></small>
                 <input id="phone" class="w3-input w3-tiny" title="Enter Phone" type="number" placeholder="Enter Phone">
+                <small id="phoneError" class="w3-text-red"></small>
                 <input id="passwordMain" class="w3-input w3-tiny" title="Enter Password" type="password" placeholder="Enter Password">
+                <small id="passwordMainError" class="w3-text-red"></small>
                 <input id="passwordCopy" class="w3-input w3-tiny" title="Enter Confirm Password" type="password" placeholder="Enter Confirm Password">
+                <small id="passwordCopyError" class="w3-text-red w3-margin-bottom"></small>
                 <button id="submit" class="w3-button w3-green w3-margin">Submit</button>
             </form>
+        </div>
+        <div>
+            <p id="output"></p>
         </div>
     </div>
 </body>
