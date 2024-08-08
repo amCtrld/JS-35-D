@@ -22,22 +22,35 @@
 * {
     box-sizing: inherit; /* Ensures that all elements respect the box-sizing rule */
 }
+
+button{
+    position: absolute;
+    top: 45%;
+}
+
+#next{
+    right: 0;
+}
+
+#prev{
+    left: 0;;
+}
 </style>
 <body>
-    <div>
+    <div class="w3-half w3-container w3-display-middle">
         <div class="w3-content">
             <div>
-                <img class="mySlides w3-padding w3-image" src="./images/render-2.jpg" alt="render-2">
+                <img class="mySlides w3-image" src="./images/render-2.jpg" alt="render-2">
             </div>
             <div>
-                <img class="mySlides w3-padding w3-image" src="./images/render-3.jpg" alt="render-3">
+                <img class="mySlides w3-image" src="./images/render-3.jpg" alt="render-3">
             </div>
             <div>
-                <img class="mySlides w3-padding w3-image" src="./images/render-4.jpg" alt="render-4">
+                <img class="mySlides w3-image" src="./images/render-4.jpg" alt="render-4">
             </div>
             <div>
-                <button class="w3-button w3-padding" id="prev"><i class="fa fa-caret-left"></i></button>
-                <button class="w3-button w3-padding w3-right" id="next"><i class="fa fa-caret-right"></i></button>
+                <button class="w3-button w3-hover-white w3-text-white w3-padding" id="prev"><i class="fa fa-caret-left"></i></button>
+                <button class="w3-button w3-hover-white w3-text-white w3-padding w3-right" id="next"><i class="fa fa-caret-right"></i></button>
             </div>
         </div>
         <div>
