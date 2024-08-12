@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,12 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="w3-card w3-display-middle w3-round-xxlarge w3-center w3-half">
+        <div class="w3-padding w3-blue w3-center">
+            Weather App
+        </div>
         <div class="w3-padding">
             <div id="weather-icon w3-round-xxlarge w3-half w3-border">
                 Hello
@@ -25,14 +30,16 @@
             <form action="">
                 <input class="w3-input w3-small" type="text" placeholder="City" id="city">
                 <div class="w3-padding">
-                <label for="Fahreinheit">F</label>
-                <input type="radio" name="units" value="metric" id="Fahreinheit">
-                <input type="radio" name="units" value="imperial" id="Celsius">
-                <label for="Celsius">C</label>
+                    <label class="switch">
+                        <input type="checkbox" title="Units" id="units">
+                        <span class="slider round"></span>
+                    </label>
                 </div>
-                <button class="w3-button w3-padding" type="button" title="search" id="search"><i class="fa fa-search"></i></button>
+                    <button class="w3-button w3-padding w3-border w3-right w3-round-xxlarge w3-margin-bottom w3-margin-right" type="button" title="search" id="search"><i
+                            class="fa fa-search"></i></button>
             </form>
         </div>
     </div>
 </body>
+
 </html>
